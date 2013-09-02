@@ -15,7 +15,7 @@ post '/cart/update' do
 end
 
 post '/cart/checkout' do
-  cart.checked_out_at = Time.now
+  cart.update_attributes(checked_out_at: Time.now)
   session.delete(:cart_id)
   redirect to("/")
 end

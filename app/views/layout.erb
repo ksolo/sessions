@@ -29,6 +29,15 @@
         Your cart is empty
       </p>
     <% end %>
+    <div class="user">
+      <% if current_user %>
+        <p>Welcome back <%= current_user.username %></p>
+      <% else %>
+        <p>
+          <a href="/login">Log In</a>
+        </p>
+      <% end %>
+    </div>
     <%= yield %>
   </div>
 </body>
