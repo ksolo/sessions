@@ -7,3 +7,7 @@
 th {
   text-align: left;
 }
+
+.action-link {
+  display : inline;
+}

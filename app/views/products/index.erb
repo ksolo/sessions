@@ -1,0 +1,25 @@
+<h1>Our Products</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+        <td>
+          <a href="/products/<%=product.id%>">Details</a>
+          <form id="add-to-cart" class="action-link" action="/cart/update" method="POST">
+            <input type="hidden" name="product_id" value="<%=product.id %>">
+            <input type="submit" value="Add to Cart">
+          </form>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
