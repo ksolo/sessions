@@ -1,3 +1,4 @@
 get '/' do
-  erb :index
+  @products = Product.all
+  erb :'products/index'
 end
