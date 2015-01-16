@@ -15,7 +15,7 @@
         <td>
           <a href="/products/<%=product.id%>">Details</a>
           <form id="add-to-cart" class="action-link" action="/cart/update" method="POST">
-            <input type="hidden" name="product_id" value="<%=product.id %>">
+            <input type="hidden" name="product_id" value="<%= product.id %>">
             <input type="submit" value="Add to Cart">
           </form>
         </td>
